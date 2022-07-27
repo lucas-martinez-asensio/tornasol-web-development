@@ -13,6 +13,7 @@ const buyBtn = document.querySelector(".buy-btn");
 const deliveryBtn = document.querySelector(".delivery-btn");
 const sizeBtn = document.querySelector(".size-btn");
 const contactBtn = document.querySelector(".contact-btn");
+const designBtn = document.querySelector(".design-btn");
 
 function toggleMenu() {
   menu.classList.toggle("menu-opened");
@@ -25,6 +26,7 @@ buyBtn.addEventListener("click", toggleMenu);
 deliveryBtn.addEventListener("click", toggleMenu);
 sizeBtn.addEventListener("click", toggleMenu);
 contactBtn.addEventListener("click", toggleMenu);
+designBtn.addEventListener("click", toggleMenu);
 
 /* Initial Navigator transparency:
     Switch Nav background from transparent to solid when scrolling
