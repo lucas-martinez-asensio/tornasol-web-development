@@ -9,41 +9,47 @@
   </head>
   <body>
     <header>
-        <nav class="nvgt">
-      <h1>TORNASOL</h1>
-      <button class="open-menu" aria-label="Abrir menú">
-        <img
+      <nav class="nvgt">
+        <button class="open-menu" aria-label="Abrir menú">
+          <img
           src="./img/hamb-icon.png"
           alt="Abrir menú"
           class="open-menu__img"
-        />
-        <button class="shop" aria-label="Comprar">
-            <img
-              src="./img/shopping-bag.png"
-              alt="Comprar"
-              class="shop__img"
-            />
-      </button>
-      <ul class="nav_button-container">
-        <button class="close-menu" aria-label="Cerrar menú">
-          <img src="./img/close.png" alt="Cerrar menú" />
-        </button>
-        <li class="nav_button-container--li">
-          <a href="#about-me" class="about-me">About me</a>
-        </li>
-        <li class="nav_button-container--li">
-          <a href="#skills" class="skills">Skills</a>
-        </li>
-        <li class="nav_button-container--li">
-          <a href="#repositories" class="repos">Projects</a>
-        </li>
-        <li class="nav_button-container--li">
-          <a href="#social" class="social">Contact</a>
-        </li>
+          />
+          <button class="shop" aria-label="Comprar">
+            <a href="https://www.empretienda.com/"><img
+            src="./img/shopping-bag.png"
+            alt="Comprar"
+            class="shop__img"
+            /></a>
+          </button>
+          <h1>TORNASOL</h1>
+        <ul class="nvgt-btn__container">
+          <button class="close-menu" aria-label="Cerrar menú">
+            <img src="./img/close-icon.png" alt="Cerrar menú" class="close-menu__img"/>
+          </button>
+          <li class="nvgt-btn__li">
+            <a href="" class="home-btn">Inicio</a>
+          </li>
+          <li class="nvgt-btn__li">
+            <a href="" class="products-btn">Productos</a>
+          </li>
+          <li class="nvgt-btn__li">
+            <a href="" class="size-btn">Talles</a>
+          </li>
+          <li class="nvgt-btn__li">
+            <a href="" class="delivery-btn">Envíos</a>
+          </li>
+          <li class="nvgt-btn__li">
+            <a href="" class="shop-btn">Comprar</a>
+          </li>
+          <li class="nvgt-btn__li">
+            <a href="" class="faq-btn">FAQS</a>
+          </li>
       </ul>
       </nav>
     </header>
-    <main class="container">
+    <main class="container-main">
         <section class="category__container">
             <div class="category-card"><p>Corpiños</p></div>
             <div class="category-card"><p> Bombachas</p></div>
@@ -65,19 +71,22 @@
       <section>
         <article>
           <h3>Contacto</h3>
+          <figure>
           <a href="mailto:tornasol_lenceria@gmail.com"
               ><img
                 src="./img/mail.png"
                 alt="Ícono de mail"
                 class="icon mail"
-            /></a>
+            /></a><a href="https://www.instagram.com/tornasolenceria_/">
             <img
                 src="./img/instagram.png"
                 alt="Ícono de Instagram"
                 class="icon insta"
-            />
+            /></a>
+          </figure>
         </article>
       </section>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
