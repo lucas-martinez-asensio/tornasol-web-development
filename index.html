@@ -7,12 +7,6 @@
     <title>Tornasol Lencería</title>
     <link rel="stylesheet" href="./style.css" />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap');
-    </style>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200&display=swap');
-    </style>
-    <style>
       @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&display=swap');
       </style>
   </head>
@@ -26,60 +20,68 @@
           class="open-menu__img"
           />
           <button class="shop" aria-label="Comprar">
-            <a href="https://www.empretienda.com/"><img
+            <a href="https://link.mercadopago.com.ar/tornasol"><img
             src="./img/shopping-bag.png"
             alt="Comprar"
             class="shop__img"
             /></a>
-          </button>
+            </button> 
           <h1>T O R N A S O L</h1>
         <ul class="nvgt-btn__container">
           <button class="close-menu" aria-label="Cerrar menú">
             <img src="./img/close-icon.png" alt="Cerrar menú" class="close-menu__img"/>
           </button>
           <li class="nvgt-btn__li">
-            <a href="" class="home-btn">Inicio</a>
+            <a href="#home" class="home-btn">Inicio</a>
           </li>
           <li class="nvgt-btn__li">
             <a href="" class="products-btn">Productos</a>
           </li>
           <li class="nvgt-btn__li">
-            <a href="" class="size-btn">Talles</a>
+            <a href="#buy" class="buy-btn">Comprar</a>
           </li>
           <li class="nvgt-btn__li">
-            <a href="" class="delivery-btn">Envíos</a>
+            <a href="#delivery" class="delivery-btn">Envíos</a>
           </li>
           <li class="nvgt-btn__li">
-            <a href="" class="shop-btn">Comprar</a>
+            <a href="#size" class="size-btn">Talles</a>
           </li>
           <li class="nvgt-btn__li">
-            <a href="" class="faq-btn">FAQS</a>
+            <a href="#contact" class="contact-btn">Contacto</a>
           </li>
       </ul>
       </nav>
     </header>
     <main class="container-main">
-      <div class="initial-img"><p></p><br></div>
+      <a name="home" class="home-tag"><div class="initial-img"></a></div>
         <section class="category__container">
             <div class="category-card bra"><p>Corpiños</p></div>
             <div class="category-card panties"><p> Bombachas</p></div>
             <div class="category-card combo"><p>Conjuntos</p></div>
         </section>
+        
         <section class="info__container">
-          <article class="delivery"><h2>Envíos</h2><br><br>
-            <p>Hacemos envíos a domicilio por medio de E-pick. <br><br>
+          <a name="buy"><article class="info design"></a><h2>Diseño a tu medida</h2><br>
+            <p>Comunicate por cualquiera de los medios que tienes<a href="#contact">aquí</a>, para hacer una prenda especialmente pensada para vos. <br> <br>
+            Así elegimos que tela, diseño y talle que deseas específicamente. Nosotros te ayudamos en lo que necesites.</p></article></a>
+          <article class="info buy"><h2>Comprar</h2><br>
+            <p> Una vez que confirmamos el diseño de la prenda, se debe realizar la reserva que es un 20% del total del/los producto/s. <br> Las reservas se abonan por <a href="https://link.mercadopago.com.ar/tornasol">MercadoPago.</a>  <br><br>
+            Una vez hecha la misma el tiempo de confección es de 10 días hábiles.<br><br>
+            Al ser confeccionada la prenda se abona el restante por medio de mercadopago o en caso de retirar personalmente también puede abonarse en efectivo.</p></article>
+          <article class="info delivery"><a name="delivery"></a><h2>Envíos</h2><br>
+            <p>Hacemos envíos a domicilio por medio de E-pick (se coordina el envío con E-pick una vez abonado el total de las prendas). <br><br>
             Retiros en San Martín centro a metros de la estación de Tren Mitre, con previo aviso.</p></article>
-          <article class="size"><h2>Talles</h2><br><br>
-            <p>Si tenés dudas o no encontrás tu talle en los siguientes cuadros, hacemos uno a tu medida. <br> <br>
-            No dudes en consultarnos, estamos para ayudarte.</p>
-            <figure><img src="./img/size-table.PNG" alt="" class="size__img"></figure>
-            <figure><img src="./img/tanga-size.PNG" alt="" class="size__img"></figure>
+          <a name="size"><article class="info size"></a><h2>Talles</h2><br>
+            <p>A continuación podes ver un cuadro con diferentes talles como referencia, pero si no encontrás el tuyo o tenés dudas no te preocupes hacemos uno a tu medida. <br> <br>
+            Cualquier duda, estamos para ayudarte.</p><br> <br> 
+          <figure><figcaption>Corpiño</figcaption><img src="./img/size-table.PNG" alt="" class="size__img"></figure>
+          <figure><figcaption>Tanga ajustable</figcaption><img src="./img/tanga-size.PNG" alt="" class="size__img"></figure>
           </article>
         </section>
     </main>
     <footer>
       <section>
-        <article>
+        <article><a name="contact"></a>
           <p>Contacto</p>
           <figure>
           <a href="mailto:tornasol_lenceria@gmail.com"
@@ -92,9 +94,37 @@
                 src="./img/instagram.png"
                 alt="Ícono de Instagram"
                 class="icon insta"
+            /></a><a href=" https://wa.me/+541151816173">
+            <img
+                src="./img/whatsapp.png"
+                alt="Ícono de Whatsapp"
+                class="icon whatsapp"
             /></a>
           </figure>
+          <ul class="footer-options">
+            <li class="footer__li">
+              <a href="#home" class="home-btn">Inicio</a>
+            </li>
+            <li class="footer__li">
+              <a href="#products" class="products-btn">Productos</a>
+            </li>
+            <li class="footer__li">
+              <a href="" class="shop-btn">Comprar</a>
+            </li>
+            <li class="footer__li">
+              <a href="#delivery" class="info-btn">Envíos</a>
+            </li>
+            <li class="footer__li">
+              <a href="#size" class="size-btn">Talles</a>
+            </li>
+            <li class="footer__li">
+              <a href="" class="faq-btn">FAQS</a>
+            </li>
+          </ul>
         </article>
+        <div class="autor">
+        <p>created by <span> LMA© </span></p>
+        </div>
       </section>
     </footer>
     <script src="./script.js"></script>

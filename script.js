@@ -8,6 +8,11 @@
 const menu = document.querySelector(".nvgt-btn__container");
 const openMenuBtn = document.querySelector(".open-menu");
 const closeMenuBtn = document.querySelector(".close-menu");
+const homeBtn = document.querySelector(".home-btn");
+const buyBtn = document.querySelector(".buy-btn");
+const deliveryBtn = document.querySelector(".delivery-btn");
+const sizeBtn = document.querySelector(".size-btn");
+const contactBtn = document.querySelector(".contact-btn");
 
 function toggleMenu() {
   menu.classList.toggle("menu-opened");
@@ -15,6 +20,11 @@ function toggleMenu() {
 
 openMenuBtn.addEventListener("click", toggleMenu);
 closeMenuBtn.addEventListener("click", toggleMenu);
+homeBtn.addEventListener("click", toggleMenu);
+buyBtn.addEventListener("click", toggleMenu);
+deliveryBtn.addEventListener("click", toggleMenu);
+sizeBtn.addEventListener("click", toggleMenu);
+contactBtn.addEventListener("click", toggleMenu);
 
 /* Initial Navigator transparency:
     Switch Nav background from transparent to solid when scrolling

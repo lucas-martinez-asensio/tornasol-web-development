@@ -146,13 +146,27 @@ main {
   font-family: "Inknut Antiqua", serif;
 }
 
+.home-tag {
+  position: absolute;
+}
+
 .initial-img {
   background-image: url(./img/corpino.PNG);
   background-size: 100vw 100vh;
   /* margin-top: 13.5rem; */
   width: 100vw;
   height: 85vh;
+  display: flex;
+  align-items: flex-end;
 }
+
+/* .initial-img p {
+  width: 100%;
+  background-color: rgba(219, 183, 185, 0.171);
+  margin-left: 3rem;
+  margin-bottom: 10rem;
+  font-size: 1.3rem;
+} */
 
 /* category cards */
 
@@ -219,26 +233,36 @@ main {
   height: auto;
   color: var(--dark-color);
   font-size: var(--info-size);
+  justify-content: space-between;
 }
 
-.delivery {
+.info p a {
+  text-decoration: underline;
+  font-size: var(--info-size);
+}
+
+.info {
   /* margin-top: rem; */
-  margin: 8rem;
+  /* margin: 3rem; */
+  margin-bottom: 25rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
 }
-
 .size {
   /* margin-top: 12.5rem; */
-  margin: 8rem;
+  /* margin: 8rem; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
+}
+
+.size figcaption {
+  font-size: 1.35rem;
 }
 
 .size figure {
@@ -251,6 +275,7 @@ main {
 .size__img {
   width: 25rem;
   margin: 4.5rem;
+  border-radius: 1rem;
 }
 
 /* footer */
@@ -259,15 +284,56 @@ footer article {
   font-size: 2rem;
   font-family: "Inknut Antiqua", serif;
   width: 100%;
-  height: 15rem;
+  height: auto;
   background-color: var(--third-color);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   color: var(--light-color);
 }
 
 .icon {
   width: 4rem;
+  height: 4rem;
+}
+
+figure {
+  display: flex;
+  flex-direction: row;
+}
+
+.whatsapp {
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
+.footer-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.footer-options li,
+.footer-options a {
+  list-style: none;
+  font-size: 1.2rem;
+  color: var(--light-color);
+}
+
+.autor {
+  height: 2rem;
+  padding-left: 0.5rem;
+  text-align: left;
+  background-color: var(--third-color);
+  color: var(--light-color);
+}
+
+.autor p {
+  font-size: 1.2rem;
+}
+
+.autor p span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
