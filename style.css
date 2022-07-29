@@ -2,8 +2,8 @@
   --light-color: rgb(248, 248, 248);
   --dark-color: rgb(17, 17, 17);
   --third-color: rgb(219, 183, 185);
-  --card-font-size: 2rem;
-  --info-size: 1.5rem;
+  --card-font-size: 1.75rem;
+  --info-size: 1.25rem;
 }
 
 * {
@@ -152,21 +152,12 @@ main {
 
 .initial-img {
   background-image: url(./img/corpino.PNG);
-  background-size: 100vw 100vh;
-  /* margin-top: 13.5rem; */
-  width: 100vw;
-  height: 85vh;
+  background-size: 100vw 85vh;
+  width: 100%;
+  height: 60vh;
   display: flex;
   align-items: flex-end;
 }
-
-/* .initial-img p {
-  width: 100%;
-  background-color: rgba(219, 183, 185, 0.171);
-  margin-left: 3rem;
-  margin-bottom: 10rem;
-  font-size: 1.3rem;
-} */
 
 /* category cards */
 
@@ -178,6 +169,12 @@ main {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+}
+
+.category__container p {
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .category-card {
@@ -220,9 +217,229 @@ main {
   background-attachment: fixed;
 }
 
+.material {
+  background-image: url(./img/black-cotton-material.PNG);
+  background-size: 100vw 100vh;
+  background-position: 0 0rem;
+  /* background-size: 50%; */
+  background-blend-mode: soft-light;
+  background-attachment: fixed;
+}
+
 .category-img {
   width: 60%;
   height: 90%;
+}
+
+/* Telas's page */
+
+.container-main__telas h1 {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-bottom: 5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: var(--info-size);
+}
+
+.material-card {
+  border-radius: 2rem;
+  margin: 2rem 0;
+  width: 70vw;
+  height: 20rem;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  font-size: var(--card-font-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-blend-mode: screen;
+}
+
+.wine {
+  background-image: url(./img/wine-material.PNG);
+  background-size: 40rem 20rem;
+}
+
+.black-cotton {
+  background-image: url(./img/black-cotton-material.PNG);
+  background-size: 40rem 20rem;
+}
+
+.violet {
+  background-image: url(./img/violet-material.PNG);
+  background-size: 100%;
+}
+
+.red {
+  background-image: url(./img/red-material.PNG);
+  background-size: 100%;
+}
+
+.wheat {
+  background-image: url(./img/wheat-material.PNG);
+  background-size: 100%;
+}
+.petrol {
+  background-image: url(./img/petrol-material.PNG);
+  background-size: 37rem 30rem;
+}
+.white-cotton {
+  background-image: url(./img/white-material.PNG);
+  background-size: 40rem 20rem;
+}
+
+.black {
+  background-image: url(./img/black-material.PNG);
+  background-size: 37rem;
+}
+
+.rose {
+  background-image: url(./img/rose-material.PNG);
+  background-size: 37rem;
+  margin-bottom: 20rem;
+}
+
+/* Conjunto's page */
+
+.atenea,
+.grecia {
+  border-radius: 2rem;
+  margin: 2rem 0;
+  width: 40vw;
+  height: 18rem;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  font-size: var(--card-font-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-blend-mode: screen;
+}
+
+.a-black {
+  background-image: url(./img/conjunto-atenea-negro.PNG);
+  background-size: 100%;
+}
+
+.a-white {
+  background-image: url(./img/conjunto-atenea-blanco.PNG);
+  background-size: 100%;
+}
+
+.a-wine {
+  background-image: url(./img/como-atenea-morado.PNG);
+  background-size: 18rem 18rem;
+  background-position: -2rem;
+}
+
+.a-petrol {
+  background-image: url(./img/combo-petrol-atenea.PNG);
+  background-size: 18rem 18rem;
+  background-position: -2rem;
+}
+
+.a-grey {
+  background-image: url(./img/combo-atenea-grey.PNG);
+  background-size: 100%;
+  background-position: 0 -2rem;
+}
+
+.a-red {
+  background-image: url(./img/combo-red-atenea.PNG);
+  background-size: 100%;
+  background-position: 0 -2rem;
+  margin-bottom: 20rem;
+}
+
+.g-dark-red {
+  background-image: url(./img/combo-camil-bordo.PNG);
+  background-size: 17.3rem 18rem;
+  background-position: -2rem;
+  margin-bottom: 20rem;
+}
+
+.mel {
+  background-image: url(./img/combo-mel.PNG);
+  background-size: 100%;
+}
+
+.melII {
+  background-image: url(./img/combo-melII.PNG);
+  background-size: 100%;
+  margin-bottom: 20rem;
+}
+
+.melIII {
+  background-image: url(./img/combo-melIII.PNG);
+  background-size: 100%;
+}
+
+.a-multi-pantie {
+  background-image: url(./img/tanga-atenea-multi.PNG);
+  background-size: 18rem 18rem;
+  background-position: -2rem;
+}
+
+.a-multi-pantieii {
+  background-image: url(./img/pantie-multiII.PNG);
+  background-size: 23rem 18rem;
+  background-position: -2rem;
+}
+
+.a-black-pantie {
+  background-image: url(./img/bombachaIV.PNG);
+  background-size: 18rem 18rem;
+  background-position: -2rem;
+  margin-bottom: 15rem;
+}
+
+.g-dark-red-pantie {
+  width: 18rem;
+  height: 18rem;
+  background-image: url(./img/grecia-panties-multi.PNG);
+  background-size: 25rem 20rem;
+  background-position: -2rem;
+}
+
+.g-black-pantie {
+  width: 18rem;
+  height: 18rem;
+  background-image: url(./img/pantie-black.PNG);
+  background-size: 20rem 20rem;
+  background-position: -2rem;
+  margin-bottom: 15rem;
+}
+
+.a-petrol-bra {
+  background-image: url(./img/bra-petrol.PNG);
+  background-size: 18rem 18rem;
+}
+
+.a-mel-bra {
+  background-image: url(./img/bra-mel.PNG);
+  background-size: 18rem 18rem;
+  margin-bottom: 20rem;
+}
+
+.a-red-bra {
+  background-image: url(./img/bra-red.PNG);
+  background-size: 100%;
+}
+
+.g-white-bra {
+  background-image: url(./img/white-grecia-bra.PNG);
+  background-size: 100%;
+}
+
+.g-black-bra {
+  margin-top: -3.6rem;
+  background-image: url(./img/grecia-bra.PNG);
+  background-size: 100%;
+  margin-bottom: 20rem;
 }
 
 /* info */
@@ -238,6 +455,10 @@ main {
 
 .info p a {
   text-decoration: underline;
+  font-size: var(--info-size);
+}
+
+.info h2 {
   font-size: var(--info-size);
 }
 
@@ -262,7 +483,7 @@ main {
 }
 
 .size figcaption {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
 }
 
 .size figure {
@@ -336,4 +557,24 @@ figure {
 
 .autor p span {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Tela's page */
+
+.footer-options__telas li,
+.footer-options__telas a {
+  list-style: none;
+  font-size: 1.2rem;
+  color: var(--light-color);
+}
+
+.footer-options__telas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.footer__telas {
+  margin-top: 10rem;
 }
