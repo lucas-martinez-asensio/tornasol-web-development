@@ -6,6 +6,7 @@
 
 */
 const menu = document.querySelector(".nvgt-btn__container");
+const shadowMenu = document.querySelector(".shadow-nvgt");
 const openMenuBtn = document.querySelector(".open-menu");
 const closeMenuBtn = document.querySelector(".close-menu");
 const homeBtn = document.querySelector(".home-btn");
@@ -17,9 +18,11 @@ const designBtn = document.querySelector(".design-btn");
 const productsBtn = document.querySelector(".products-btn");
 
 function toggleMenu() {
+  shadowMenu.classList.toggle("menu-opened");
   menu.classList.toggle("menu-opened");
 }
 
+shadowMenu.addEventListener("click", toggleMenu);
 openMenuBtn.addEventListener("click", toggleMenu);
 closeMenuBtn.addEventListener("click", toggleMenu);
 homeBtn.addEventListener("click", toggleMenu);
@@ -29,6 +32,14 @@ sizeBtn.addEventListener("click", toggleMenu);
 contactBtn.addEventListener("click", toggleMenu);
 designBtn.addEventListener("click", toggleMenu);
 productsBtn.addEventListener("click", toggleMenu);
+
+/*Slide Navigator fx */
+
+function navOpenMove() {
+  menu.classList.toggle("nav-slide-fx");
+}
+openMenuBtn.addEventListener("click", navOpenMove);
+closeMenuBtn.addEventListener("click", navOpenMove);
 
 /* Initial Navigator transparency:
     Switch Nav background from transparent to solid when scrolling

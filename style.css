@@ -1,9 +1,28 @@
 :root {
   --light-color: rgb(248, 248, 248);
+  --transp-color: rgba(248, 248, 248, 0.849);
   --dark-color: rgb(17, 17, 17);
   --third-color: rgb(219, 183, 185);
   --card-font-size: 1.75rem;
   --info-size: 1rem;
+}
+
+@keyframes nvgtMove {
+  0% {
+    margin-left: -20rem;
+  }
+  100% {
+    margin-left: 0rem;
+  }
+}
+
+@keyframes nvgtMoveOut {
+  100% {
+    margin-left: -20rem;
+  }
+  0% {
+    margin-left: 0rem;
+  }
 }
 
 * {
@@ -25,7 +44,7 @@ body {
 
 header {
   width: 100%;
-  height: 20vh;
+  height: 16vh;
   background-color: rgba(0, 0, 0, 0);
   display: flex;
   position: fixed;
@@ -43,15 +62,17 @@ header h1 {
   position: absolute;
   text-align: center;
   width: 100%;
-  top: 1rem;
+  /* top: 1rem; */
+  padding: 1rem;
   color: var(--dark-color);
   font-size: 2.2rem;
   z-index: 1rem;
+  background-color: rgba(248, 248, 248, 0.877);
 }
 
 .open-menu {
   width: 10%;
-  height: 5rem;
+  height: 4rem;
   border-radius: 1rem;
   border: transparent;
   background: none;
@@ -84,15 +105,32 @@ header h1 {
   font-family: "Inknut Antiqua", serif;
   display: flex;
   position: fixed;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   overflow-y: auto;
-  width: 100%;
+  width: 42%;
   height: 100rem;
   background-color: var(--light-color);
-  border-top-right-radius: 5rem;
+  border-top-right-radius: 2.5rem;
   opacity: 0;
-  transition: opacity 0.35s;
+  transition: opacity;
+  pointer-events: none;
+}
+
+.nav-slide-fx {
+  /* animation: nvgtMove 0.5s; */
+  animation: nvgtMove 0.4s cubic-bezier(0, 0.89, 0.28, 0.9);
+}
+
+.shadow-nvgt {
+  background-color: rgba(17, 17, 17, 0.685);
+  margin-left: 25%;
+  width: 85%;
+  min-height: 100vh;
+  overflow-y: auto;
+  position: fixed;
+  opacity: 0;
+  transition: opacity 0.2s;
   pointer-events: none;
 }
 
@@ -103,21 +141,28 @@ header h1 {
   background: none;
   width: 87%;
   height: 2.5rem;
-  margin: 2rem;
+  margin: 3rem 0;
 }
 
 .close-menu__img {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .nvgt-btn__container li,
 a {
   list-style: none;
   text-decoration: none;
-  font-size: 1.25rem;
-  margin: 1rem 1rem;
+  font-size: 0.75rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   color: var(--dark-color);
+  transition: 0.25s;
+}
+
+.nvgt-btn__container a:hover {
+  color: var(--third-color);
 }
 
 /* Open menu fx */
@@ -130,7 +175,7 @@ a {
 /* Nav transparency fx */
 
 .nav_transparency {
-  background-color: var(--light-color);
+  background-color: var(--transp-color);
 }
 
 /* main */
@@ -159,10 +204,25 @@ main {
   align-items: flex-end;
 }
 
+.off {
+  width: 100vw;
+  height: 2.5vh;
+  background-color: rgba(219, 183, 185, 0.644);
+  /* border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 55vh;
+}
+
+.off p {
+  font-size: 0;
+}
+
 /* category cards */
 
 .category__container {
-  margin-top: 65vh;
   /* width: 100%; */
   /* height: 100%; */
   display: flex;
@@ -188,6 +248,18 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.a-combo-container {
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 90%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
 }
 
 .bra {
@@ -231,6 +303,10 @@ main {
   height: 90%;
 }
 
+.pc-width h2 {
+  margin: 3rem;
+}
+
 /* Telas's page */
 
 .container-main__telas h1 {
@@ -247,6 +323,7 @@ main {
   border-radius: 2rem;
   margin: 2rem 0;
   width: 70vw;
+  max-width: 40rem;
   height: 20rem;
   background-color: var(--dark-color);
   color: var(--light-color);
@@ -293,12 +370,12 @@ main {
 
 .black {
   background-image: url(./img/black-material.PNG);
-  background-size: 37rem;
+  background-size: 110%;
 }
 
 .rose {
   background-image: url(./img/rose-material.PNG);
-  background-size: 37rem;
+  background-size: 100%;
   margin-bottom: 20rem;
 }
 
@@ -308,7 +385,7 @@ main {
 .grecia {
   border-radius: 2rem;
   margin: 2rem 0;
-  width: 40vw;
+  width: 20rem;
   height: 18rem;
   background-color: var(--dark-color);
   color: var(--light-color);
@@ -332,14 +409,12 @@ main {
 
 .a-wine {
   background-image: url(./img/como-atenea-morado.PNG);
-  background-size: 18rem 18rem;
-  background-position: -2rem;
+  background-size: 100%;
 }
 
 .a-petrol {
   background-image: url(./img/combo-petrol-atenea.PNG);
-  background-size: 18rem 18rem;
-  background-position: -2rem;
+  background-size: 100%;
 }
 
 .a-grey {
@@ -357,8 +432,7 @@ main {
 
 .g-dark-red {
   background-image: url(./img/combo-camil-bordo.PNG);
-  background-size: 17.3rem 18rem;
-  background-position: -2rem;
+  background-size: 100%;
   margin-bottom: 20rem;
 }
 
@@ -382,8 +456,7 @@ main {
 
 .a-multi-pantie {
   background-image: url(./img/tanga-atenea-multi.PNG);
-  background-size: 18rem 18rem;
-  background-position: -2rem;
+  background-size: 110%;
 }
 
 .a-multi-pantieii {
@@ -394,8 +467,7 @@ main {
 
 .a-black-pantie {
   background-image: url(./img/bombachaIV.PNG);
-  background-size: 18rem 18rem;
-  background-position: -2rem;
+  background-size: 100%;
   margin-bottom: 15rem;
 }
 
@@ -411,8 +483,7 @@ main {
   width: 18rem;
   height: 18rem;
   background-image: url(./img/pantie-black.PNG);
-  background-size: 20rem 20rem;
-  background-position: -2rem;
+  background-size: 100%;
   margin-bottom: 15rem;
 }
 
@@ -420,12 +491,12 @@ main {
 
 .a-petrol-bra {
   background-image: url(./img/bra-petrol.PNG);
-  background-size: 18rem 18rem;
+  background-size: 20rem 18rem;
 }
 
 .a-mel-bra {
   background-image: url(./img/bra-mel.PNG);
-  background-size: 18rem 18rem;
+  background-size: 20rem 18rem;
   margin-bottom: 20rem;
 }
 
@@ -436,20 +507,21 @@ main {
 
 .g-white-bra {
   background-image: url(./img/white-grecia-bra.PNG);
-  background-size: 100%;
+  background-size: 20rem 18rem;
 }
 
 .g-black-bra {
   margin-top: -3.6rem;
   background-image: url(./img/grecia-bra.PNG);
-  background-size: 100%;
+  background-size: 20rem 18rem;
   margin-bottom: 20rem;
 }
 
 /* info */
 
 .info__container {
-  margin-top: 35rem;
+  margin-top: 10rem;
+  margin-bottom: 35rem;
   width: 90vw;
   height: auto;
   color: var(--dark-color);
@@ -608,4 +680,223 @@ figure {
 
 .footer__telas {
   margin-top: 10rem;
+}
+
+@media (min-width: 600px) {
+  .initial-img {
+    background-image: url(./img/init-page.PNG);
+    /* background-position: -em; */
+  }
+
+  .off {
+    width: 100vw;
+    height: 10vh;
+    background-color: rgba(219, 183, 185, 0.644);
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .off p {
+    color: var(--dark-color);
+    font-size: var(--info-size);
+  }
+}
+
+@media (min-width: 900px) {
+  :root {
+    --info-size: 1.25rem;
+  }
+
+  .nvgt-btn__container {
+    width: 20%;
+  }
+
+  .shadow-nvgt {
+    margin-left: 5%;
+    width: 95%;
+  }
+
+  .nvgt-btn__container li,
+  a {
+    margin-left: 3rem;
+    list-style: none;
+    text-decoration: none;
+    font-size: 1.25rem;
+  }
+
+  .initial-img {
+    background-image: url(./img/init-page.PNG);
+    background-size: 97.5vw 100vh;
+    background-position: 0 0rem;
+    width: 97.5vw;
+    height: 80vh;
+    margin-bottom: 0;
+  }
+
+  .off {
+    width: 97.5vw;
+    height: 10vh;
+    background-color: rgba(219, 183, 185, 0.644);
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .off p {
+    color: var(--dark-color);
+    font-size: var(--info-size);
+  }
+
+  .open-menu {
+    margin-left: 1rem;
+  }
+
+  .shop {
+    margin-right: 2.5rem;
+  }
+
+  .category__container {
+    margin-top: 15vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .pc-width {
+    flex-direction: column;
+  }
+
+  .category-card {
+    margin: 2rem 0;
+    width: 40vw;
+    height: 30rem;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    font-size: var(--card-font-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .a-combo-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    /* max-width: 10vw; */
+    height: auto;
+    justify-content: center;
+  }
+
+  .bra {
+    background-image: url(./img/corpinoI.PNG);
+    background-size: 50%;
+    background-position: 0.25rem;
+    /* background-size: 50%; */
+    background-blend-mode: soft-light;
+    background-attachment: fixed;
+  }
+
+  .panties {
+    background-image: url(./img/bombachaIV.PNG);
+    background-size: 50%;
+    background-position: 0.25rem;
+    /* background-size: 50%; */
+    background-blend-mode: soft-light;
+    background-attachment: fixed;
+  }
+
+  .combo {
+    background-image: url(./img/combo.PNG);
+    background-size: 50%;
+    background-position: 0.25rem;
+    /* background-size: 50%; */
+    background-blend-mode: soft-light;
+    background-attachment: fixed;
+  }
+
+  .material {
+    background-image: url(./img/black-cotton-material.PNG);
+    background-size: 50%;
+    background-position: 0.25rem;
+    /* background-size: 50%; */
+    background-blend-mode: soft-light;
+    background-attachment: fixed;
+  }
+
+  .info__container {
+    margin-top: 15rem;
+    width: 40vw;
+    height: auto;
+    color: var(--dark-color);
+    font-size: var(--info-size);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .atenea,
+  .grecia {
+    border-radius: 2rem;
+    margin: 2rem 2rem;
+    width: 20rem;
+    height: 18rem;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    font-size: var(--card-font-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-blend-mode: screen;
+  }
+
+  .material-card {
+    border-radius: 2rem;
+    margin: 2rem;
+    width: 30rem;
+    height: 20rem;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    font-size: var(--card-font-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-blend-mode: screen;
+  }
+
+  .container-main__telas h1 {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-size: var(--info-size);
+  }
+
+  .material-container-pc {
+    margin: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .correct-backimg-posit {
+    background-position: 30.25rem;
+  }
 }
