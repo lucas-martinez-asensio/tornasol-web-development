@@ -215,7 +215,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 55vh;
+  margin-bottom: 30vh;
 }
 
 .off p {
@@ -615,6 +615,7 @@ footer article {
   display: flex;
   flex-direction: column;
   justify-content: start;
+  text-align: center;
   align-items: center;
   color: var(--light-color);
 }
@@ -622,6 +623,11 @@ footer article {
 .icon {
   width: 4rem;
   height: 4rem;
+}
+
+.icon:hover {
+  background-color: var(--dark-color);
+  border-radius: 1rem;
 }
 
 figure {
@@ -641,11 +647,23 @@ figure {
   margin-bottom: 5rem;
 }
 
+.ftr__icon {
+  /* width: 100%; */
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+}
+
 .footer-options li,
 .footer-options a {
   list-style: none;
   font-size: 1.2rem;
   color: var(--light-color);
+}
+
+.footer-options a:hover {
+  background-color: var(--dark-color);
+  border-radius: 1rem;
 }
 
 .autor {
@@ -680,6 +698,10 @@ figure {
   margin-bottom: 5rem;
 }
 
+.ftr__title {
+  margin-left: 1.5rem;
+}
+
 .footer__telas {
   margin-top: 10rem;
 }
@@ -698,6 +720,7 @@ figure {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 25vh;
   }
 
   .off p {
@@ -898,5 +921,9 @@ figure {
 
   .correct-backimg-posit {
     background-position: 30.25rem;
+  }
+
+  .ftr__title {
+    margin-left: 4rem;
   }
 }
