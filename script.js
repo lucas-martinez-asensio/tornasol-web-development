@@ -33,14 +33,6 @@ contactBtn.addEventListener("click", toggleMenu);
 designBtn.addEventListener("click", toggleMenu);
 productsBtn.addEventListener("click", toggleMenu);
 
-/*Slide Navigator fx */
-
-function navOpenMove() {
-  menu.classList.toggle("nav-slide-fx");
-}
-openMenuBtn.addEventListener("click", navOpenMove);
-closeMenuBtn.addEventListener("click", navOpenMove);
-
 /* Initial Navigator transparency:
     Switch Nav background from transparent to solid when scrolling
 
