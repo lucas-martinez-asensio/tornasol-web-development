@@ -574,6 +574,9 @@ main {
 }
 
 .info p a {
+  margin-left: 0rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
   text-decoration: underline;
   font-size: var(--info-size);
 }
