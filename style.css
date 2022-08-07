@@ -92,7 +92,7 @@ header h1 {
   height: 30%;
   border: transparent;
   background: none;
-  margin-top: 5.95rem;
+  margin-top: 5rem;
   margin-right: 2.5rem;
 }
 
@@ -753,7 +753,7 @@ figure {
 
 @media (min-width: 600px) {
   header {
-    height: 24vh;
+    height: 30vh;
   }
 
   .img-cont_container {
