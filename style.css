@@ -752,6 +752,10 @@ figure {
 }
 
 @media (min-width: 600px) {
+  header {
+    height: 24vh;
+  }
+
   .img-cont_container {
     width: 45vw;
     height: 70vh;
