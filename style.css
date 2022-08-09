@@ -792,7 +792,7 @@ figure {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   :root {
     --info-size: 1.25rem;
   }
