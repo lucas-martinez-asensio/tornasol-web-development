@@ -38,10 +38,6 @@ productsBtn.addEventListener("click", toggleMenu);
 
 */
 
-window.onscroll = function () {
-  scrollTransparency();
-};
-
 const header = document.querySelector(".nvgt");
 const card = document.querySelector(".category__container");
 
@@ -50,9 +46,13 @@ var distance_category;
 function scrollTransparency() {
   distance_category =
     card.getBoundingClientRect().top - header.getBoundingClientRect().bottom;
-  if (distance_category <= 200) {
+  if (distance_category <= 300) {
     header.classList.add("nav_transparency");
-  } else if (distance_category > 200) {
+  } else if (distance_category > 300) {
     header.classList.remove("nav_transparency");
   }
 }
+
+window.onscroll = function () {
+  scrollTransparency();
+};
