@@ -110,7 +110,7 @@ header h1 {
   align-items: flex-start;
   flex-direction: column;
   overflow-y: auto;
-  width: 42%;
+  width: 50%;
   height: 100rem;
   background-color: var(--light-color);
   border-top-right-radius: 2.5rem;
