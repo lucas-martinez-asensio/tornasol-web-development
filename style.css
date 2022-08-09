@@ -582,6 +582,10 @@ main {
   font-size: var(--info-size);
 }
 
+.category__container .a {
+  margin: 0;
+}
+
 .info h2 {
   font-size: 1.25;
 }
