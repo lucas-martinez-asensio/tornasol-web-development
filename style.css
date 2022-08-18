@@ -50,6 +50,7 @@ header {
   display: flex;
   position: fixed;
   overflow-y: auto;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .nvgt {
